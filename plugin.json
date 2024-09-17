@@ -1,0 +1,59 @@
+{
+    "id": "mattermost-ai",
+    "name": "chatBotAI",
+    "description": "This plugin has the function of automatically replying to users when mentioned.",
+    "homepage_url": "https://github.com/mattermost/mattermost-plugin-starter-template",
+    "support_url": "https://github.com/mattermost/mattermost-plugin-starter-template/issues",
+    "icon_path": "assets/starter-template-icon.svg",
+    "min_server_version": "6.2.1",
+    "server": {
+        "executables": {
+            "linux-amd64": "server/dist/plugin-linux-amd64",
+            "linux-arm64": "server/dist/plugin-linux-arm64",
+            "darwin-amd64": "server/dist/plugin-darwin-amd64",
+            "darwin-arm64": "server/dist/plugin-darwin-arm64",
+            "windows-amd64": "server/dist/plugin-windows-amd64.exe"
+        }
+    },
+    "webapp": {
+        "bundle_path": "webapp/dist/main.js"
+    },
+    "settings_schema": {
+        "header": "",
+        "footer": "",
+        "settings": [
+            {
+                "key": "SECRET_KEY",
+                "display_name": "OpenAI Secret Key",
+                "type": "text",
+                "help_text": "Enter your OpenAI API Secret Key",
+                "placeholder": "xxx",
+                "default": ""
+            },
+            {
+                "key": "PROXY_URL",
+                "display_name": "Proxy URL",
+                "type": "text",
+                "help_text": "Enter the proxy URL for OpenAI requests",
+                "placeholder": "https://api.openai.com",
+                "default": "https://api.openai.com"
+            },
+            {
+                "key": "BOT_ID",
+                "display_name": "Bot ID",
+                "type": "text",
+                "help_text": "Enter the bot ID",
+                "placeholder": "ID for bot",
+                "default": ""
+            },
+            {
+                "key": "ASSISTANT_ID",
+                "display_name": "Assistant ID",
+                "type": "text",
+                "help_text": "Enter the assistant ID",
+                "placeholder": "Assistant id for bot",
+                "default": ""
+            }
+        ]
+    }
+}
